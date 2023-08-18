@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    mode: "jit",
+
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -39,11 +41,11 @@ module.exports = {
             "dark",
             {
                 waifudex: {
-                    primary: "#ffffff",
+                    primary: "#131313",
                     secondary: "#888888",
                     accent: "#9ec5ff",
                     neutral: "#2a323c",
-                    "base-100": "#131313",
+                    "base-100": "#ffffff",
                     info: "#93c5fd",
                     success: "#36d399",
                     warning: "#fcd34d",
