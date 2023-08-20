@@ -17,7 +17,7 @@ const MouseMoveImageGallery = ({
     imgScale?: number;
     stepLength?: number;
 }) => {
-    const refs = imgSrcs.map(() => useRef(null));
+    let refs: any = [];
     let currentIndex = 0;
     let steps = 0;
     let nbOfImages = 0;
@@ -79,11 +79,14 @@ const MouseMoveImageGallery = ({
     return (
         <div className={className} onMouseMove={manageMouseMove}>
             {imgSrcs.map((src, index) => {
+                const ref = useRef(null);
+                refs.push(ref);
+
                 return (
                     <img
                         className={`absolute transform -translate-x-1/2 -translate-y-1/2 max-h-[300px] max-w-[300px] `}
                         key={index}
-                        ref={refs[index]}
+                        ref={ref}
                         src={src}
                     ></img>
                 );
