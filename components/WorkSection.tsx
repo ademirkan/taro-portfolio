@@ -68,7 +68,7 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-fe"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-8 pt-8">
+                            <div className="w-[50%] pb-4 pt-4">
                                 <ExperienceCard
                                     timeframe="Fall 2022"
                                     company="CounselHero"
@@ -108,7 +108,7 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-python"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-8 pt-8">
+                            <div className="w-[50%] pb-4 pt-4">
                                 <ExperienceCard
                                     timeframe="Summer 2022"
                                     company="CounselHero"
@@ -148,7 +148,7 @@ const WorkSection: React.FC = () => {
                             id="monkeytype-experience"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-8 pt-8">
+                            <div className="w-[50%] pb-4 pt-4">
                                 <ProjectCard
                                     timeframe="Summer 2023"
                                     name="URL Lab"
@@ -190,7 +190,7 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-fe"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-8 pt-8">
+                            <div className="w-[50%] pb-4 pt-4">
                                 <ProjectCard
                                     timeframe="Summer 2022"
                                     name="Deepflow"
@@ -230,7 +230,7 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-python"
                             className=" w-[100%] flex flex-row "
                         >
-                            <div className="w-[50%] pb-8 pt-8">
+                            <div className="w-[50%] pb-4 pt-4">
                                 <ProjectCard
                                     timeframe="Spring 2022"
                                     name="Birds of a Feather"
