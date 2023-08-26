@@ -41,11 +41,11 @@ module.exports = {
             "dark",
             {
                 waifudex: {
-                    primary: "#131313",
+                    primary: "#ffffff",
                     secondary: "#888888",
                     accent: "#9ec5ff",
                     neutral: "#2a323c",
-                    "base-100": "#ffffff",
+                    "base-100": "#131313",
                     info: "#93c5fd",
                     success: "#36d399",
                     warning: "#fcd34d",

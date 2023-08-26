@@ -80,3 +80,22 @@ html {
     // background-image: url(http://noisepng.com/200-40-12.png);
     background-image: url(/noise-light.png);
 }
+
+.vignetteContainer {
+    clip-path: polygon(0 -15%, 100% 0%, 100% 100%, 0 100%);
+    .vignette {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        height: 100vh;
+        width: 50%;
+        overflow: hidden;
+
+        * {
+            margin-left: 100px;
+            margin-top: 100px;
+            box-shadow: black;
+        }
+    }
+}

@@ -9,8 +9,9 @@ const subtitleFont = Lexend({ subsets: ["latin"], weight: "400" });
 const bulletFont = Roboto({ subsets: ["latin"], weight: "300" });
 
 const ProjectCard = (props: {
-    timeframe: string;
+    timeframe?: string;
     name: string;
+    label: string;
     description: string;
     technologies: string[];
     site?: string;
@@ -18,19 +19,26 @@ const ProjectCard = (props: {
 }) => {
     return (
         <>
-            <h1 className="text-primary text-xl">{props.name}</h1>
+            {props.timeframe && (
+                <div className="text-secondary text-md opacity-75 relative top-1">
+                    {props.timeframe}
+                </div>
+            )}
+            <h1 className="text-primary text-3xl">{props.name}</h1>
+            <h2 className="text-secondary">{props.label}</h2>
+
             <div
-                className={`text-sm pb-4 pt-2 ${bulletFont.className} text-secondary`}
+                className={`text-lg pb-4 pt-2 ${bulletFont.className} text-secondary`}
             >
                 {props.description}
             </div>
 
-            <div className="flex flex-row gap-2 text-xs select-none flex-wrap">
+            <div className="flex flex-row gap-[6px] text-md select-none flex-wrap">
                 {props.technologies.map((technology: string, i: number) => {
                     return (
                         <div
                             key={i}
-                            className="badge badge-accent badge-sm py-3 px-2"
+                            className="badge badge-accent badge-lg py-3 px-2"
                         >
                             {technology}
                         </div>
@@ -40,7 +48,7 @@ const ProjectCard = (props: {
             <div key="buttons" className="flex flex-row flex-wrap gap-2 py-4">
                 <button className="btn btn-outline btn-sm btn-primary normal-case">
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    <a className="text-xs" href={props.site}>
+                    <a className="text-md" href={props.site}>
                         Visit Site
                     </a>
                 </button>
@@ -49,7 +57,7 @@ const ProjectCard = (props: {
                     disabled={!props.source}
                 >
                     <FontAwesomeIcon icon={faGithub as IconProp} />
-                    <a className="text-xs" href={props.source || "/"}>
+                    <a className="text-md" href={props.source || "/"}>
                         {props.source ? "Code" : "Private"}
                     </a>
                 </button>
