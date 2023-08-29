@@ -39,7 +39,12 @@ export default function Home() {
             <WorkSection />
 
             <section className="h-[100vh] w-[100%] bg-base-100 flex flex-col justify-center items-center text-primary">
-                yeet1
+                <Image
+                    src={"/pfp.png"}
+                    alt={"profile pic"}
+                    width={300}
+                    height={300}
+                ></Image>
             </section>
         </>
     );

@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import useScrollPercent from "@/hooks/useScrollPercent";
 import { Lexend, Voces } from "next/font/google";
-import ProjectCard from "./ProjectCard";
 import Image from "next/image";
 
 const titleFont = Lexend({ subsets: ["latin"], weight: "600" });
 const subtitleFont = Lexend({ subsets: ["latin"], weight: "400" });
-const dictionaryFont = Voces({ subsets: ["latin"], weight: "400" });
+const boldFont = Voces({ subsets: ["latin"], weight: "400" });
+const bulletFont = Lexend({ subsets: ["latin"], weight: "200" });
 
 import ExperienceCard from "./ExperienceCard";
 
@@ -24,18 +23,11 @@ const WorkSection: React.FC = () => {
                             id="monkeytype-experience"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-4 pt-32">
+                            <div className="w-[50%] pb-16 pt-32">
                                 <ExperienceCard
                                     timeframe="Jun. 2023 - Present"
                                     company="Monkeytype"
-                                    role="Frontend Developer Intern"
-                                    bullets={[
-                                        "Expanded UI library for #1 typing site with ~2 million users",
-                                        "Independently launched fluid highlighting feature, now serving ~120,000 users daily",
-                                        "Proposed several UI improvements to leadership, developed and implemented in pull requests",
-                                        "Improved animation frame rate by ~52% in core component",
-                                        "Optimized legacy component, reducing jQuery calls by ~99% and DOM manipulations by ~96%",
-                                    ]}
+                                    label="Frontend Developer Intern"
                                     technologies={[
                                         "Typescript",
                                         "Sass",
@@ -44,15 +36,44 @@ const WorkSection: React.FC = () => {
                                         "CSS",
                                     ]}
                                     site="https://monkeytype.com/"
-                                />
+                                    source="https://github.com/monkeytypegame/monkeytype/pull/4448"
+                                >
+                                    <ul
+                                        className={`list-disc pl-4 text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        <li>
+                                            Expanded UI library for #1 typing
+                                            site with ~2 million users
+                                        </li>
+                                        <li>
+                                            Independently launched fluid
+                                            highlighting feature, now serving
+                                            ~120,000 users daily
+                                        </li>
+                                        <li>
+                                            Proposed several UI improvements to
+                                            leadership, developed and
+                                            implemented in pull requests
+                                        </li>
+                                        <li>
+                                            Improved animation frame rate by
+                                            ~52% in core component
+                                        </li>
+                                        <li>
+                                            Optimized legacy component, reducing
+                                            jQuery calls by ~99% and DOM
+                                            manipulations by ~96%
+                                        </li>
+                                    </ul>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(30,30,34,30)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl m-8 "
                                         src="/screenshots/highres-mt-chart.png"
                                         alt="monkeytype-screenshot"
-                                        height={200} // Adjust as needed; avoid -1
+                                        height={200}
                                         width={700}
                                         layout="cover"
                                         style={{
@@ -68,28 +89,45 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-fe"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-4 pt-4">
+                            <div className="w-[50%] pb-16 pt-16">
                                 <ExperienceCard
                                     timeframe="Fall 2022"
                                     company="CounselHero"
-                                    role="Frontend Developer Intern"
-                                    bullets={[
-                                        "Expanded UI library for ed-tech startup using React and Typescript",
-                                        "Proposed and led optimization task, improving page load-time by ~21%",
-                                        "Designed and implemented several core UI components to support product launch",
-                                        "Implemented responsive UI for mobile support",
-                                    ]}
+                                    label="Frontend Developer Intern"
                                     technologies={[
                                         "React",
                                         "Typescript",
                                         "Figma",
                                     ]}
-                                />
+                                    site="https://www.counselhero.com/"
+                                >
+                                    <ul
+                                        className={`list-disc pl-4 text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        <li>
+                                            Expanded UI library for ed-tech
+                                            startup using React and Typescript
+                                        </li>
+                                        <li>
+                                            Proposed and led optimization task,
+                                            improving page load-time by ~21%
+                                        </li>
+                                        <li>
+                                            Designed and implemented several
+                                            core UI components to support
+                                            product launch
+                                        </li>
+                                        <li>
+                                            Implemented responsive UI for mobile
+                                            support
+                                        </li>
+                                    </ul>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(40,60,120,100)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl "
                                         src="/screenshots/highres-ch-university.png"
                                         alt="monkeytype-screenshot"
                                         height={200} // Adjust as needed; avoid -1
@@ -108,27 +146,42 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-python"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-4 pt-4">
+                            <div className="w-[50%] pb-16 pt-16">
                                 <ExperienceCard
                                     timeframe="Summer 2022"
                                     company="CounselHero"
-                                    role="Software Engineer Intern"
-                                    bullets={[
-                                        "Collaborated with frontend and backend teams to build internal tools using Python",
-                                        "Developed scraper to parse rankings of ~1500 universities",
-                                        "Created internal tool to automate updating school ranks in database, saving 100+ hours of data entry",
-                                    ]}
+                                    label="Software Engineer Intern"
                                     technologies={[
                                         "Python",
                                         "Postman",
                                         "REST API",
                                     ]}
-                                />
+                                    site="https://www.counselhero.com/"
+                                >
+                                    <ul
+                                        className={`list-disc pl-4 text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        <li>
+                                            Collaborated with frontend and
+                                            backend teams to build internal
+                                            tools using Python
+                                        </li>
+                                        <li>
+                                            Developed scraper to parse rankings
+                                            of ~1500 universities
+                                        </li>
+                                        <li>
+                                            Created internal tool to automate
+                                            updating school ranks in database,
+                                            saving 100+ hours of data entry
+                                        </li>
+                                    </ul>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette ">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(2,60,120,100)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl m-8 "
                                         src="/screenshots/highres-ch-landing-mac.png"
                                         alt="monkeytype-screenshot"
                                         height={200} // Adjust as needed; avoid -1
@@ -148,12 +201,11 @@ const WorkSection: React.FC = () => {
                             id="monkeytype-experience"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-4 pt-4">
-                                <ProjectCard
+                            <div className="w-[50%] pb-16 pt-16">
+                                <ExperienceCard
                                     timeframe="Summer 2023"
-                                    name="URL Lab"
+                                    company="URL Lab"
                                     label="Side Project"
-                                    description="An opensource URL shortener built for the modern web. Shorten your links with ease and track analytics such as clickrate, regional demographics, device types, etc."
                                     technologies={[
                                         "Next.js",
                                         "Typescript",
@@ -166,12 +218,22 @@ const WorkSection: React.FC = () => {
                                     ]}
                                     site="https://app.urllab.co/"
                                     source="https://github.com/ademirkan/URL-Lab-FrontEnd"
-                                />
+                                >
+                                    <span
+                                        className={`text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        An opensource URL shortener built for
+                                        the modern web. Shorten your links with
+                                        ease and track analytics such as
+                                        clickrate, regional demographics, device
+                                        types, etc.
+                                    </span>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(80,80,100,100)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl m-8 "
                                         src="/screenshots/highres-urllab.png"
                                         alt="monkeytype-screenshot"
                                         height={200} // Adjust as needed; avoid -1
@@ -190,12 +252,11 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-fe"
                             className=" w-[100%] flex flex-row"
                         >
-                            <div className="w-[50%] pb-4 pt-4">
-                                <ProjectCard
+                            <div className="w-[50%] pb-16 pt-16">
+                                <ExperienceCard
                                     timeframe="Summer 2022"
-                                    name="Deepflow"
+                                    company="Deepflow"
                                     label="Side Project"
-                                    description="Productivity web app that allows users to sync study sessions with their friends. Configure your study/break sessions, share a link to your friends, and study together. "
                                     technologies={[
                                         "React",
                                         "Typescript",
@@ -206,12 +267,22 @@ const WorkSection: React.FC = () => {
                                     ]}
                                     site="https://deepflow.live/"
                                     source="https://github.com/ademirkan/Deepflow-Nextjs"
-                                />
+                                >
+                                    <span
+                                        className={`text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        Productivity web app that allows users
+                                        to sync study sessions with their
+                                        friends. Configure your study/break
+                                        sessions, share a link to your friends,
+                                        and study together.
+                                    </span>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(74,70,66,100)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl m-8 "
                                         src="/screenshots/highres-df.png"
                                         alt="monkeytype-screenshot"
                                         height={200} // Adjust as needed; avoid -1
@@ -230,24 +301,34 @@ const WorkSection: React.FC = () => {
                             id="counselhero-experience-python"
                             className=" w-[100%] flex flex-row "
                         >
-                            <div className="w-[50%] pb-4 pt-4">
-                                <ProjectCard
+                            <div className="w-[50%] pb-16 pt-16">
+                                <ExperienceCard
                                     timeframe="Spring 2022"
-                                    name="Birds of a Feather"
+                                    company="Birds of a Feather"
                                     label="University Group Project"
-                                    description="A web app that allows users to find familiar faces from previous classes. On the first day of class, students turn on the search mode. The app then searches for other devices, sorts students by past mutual classes."
                                     technologies={[
                                         "Java",
                                         "Android Studio",
                                         "Bluetooth",
                                     ]}
                                     source="https://github.com/CSE-110-Winter-2022/birds-of-a-feather-cse-110-team-4"
-                                />
+                                >
+                                    <span
+                                        className={`text-sm my-2 ${bulletFont.className} text-secondary`}
+                                    >
+                                        A web app that allows users to find
+                                        familiar faces from previous classes. On
+                                        the first day of class, students turn on
+                                        the search mode. The app then searches
+                                        for other devices, sorts students by
+                                        past mutual classes.
+                                    </span>
+                                </ExperienceCard>
                             </div>
                             <div className="vignetteContainer w-[100%]">
-                                <div className="vignette ">
+                                <div className="vignette drop-shadow-[-7px_7px_20px_rgba(40,60,120,100)]">
                                     <Image
-                                        className="rounded-xl"
+                                        className="rounded-xl m-8 "
                                         src="/screenshots/highres-ch-landing-mac.png"
                                         alt="monkeytype-screenshot"
                                         height={200} // Adjust as needed; avoid -1
