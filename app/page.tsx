@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Lexend, Voces } from "next/font/google";
-import MouseMoveImageGallery from "@/components/MouseMoveImageGallery";
 import WorkSection from "@/components/WorkSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
