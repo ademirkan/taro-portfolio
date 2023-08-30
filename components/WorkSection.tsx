@@ -102,7 +102,7 @@ const WorkSection: React.FC = () => {
 
                 <li
                     id="counselhero-experience-fe"
-                    className=" w-[100%] flex flex-row"
+                    className={`md:w-[100%] w-[80%] flex flex-row`}
                 >
                     <div className="md:w-[50%] w-[100%] pb-16 pt-16 flex flex-col items-center md:pl-16">
                         <ExperienceCard
@@ -156,7 +156,7 @@ const WorkSection: React.FC = () => {
 
                 <li
                     id="counselhero-experience-python"
-                    className=" w-[100%] flex flex-row"
+                    className={`md:w-[100%] w-[80%] flex flex-row`}
                 >
                     <div className="md:w-[50%] w-[100%] pb-16 pt-16 flex flex-col items-center md:pl-16">
                         <ExperienceCard
@@ -209,7 +209,7 @@ const WorkSection: React.FC = () => {
                 {/** PROJETS  */}
                 <li
                     id="monkeytype-experience"
-                    className=" w-[100%] flex flex-row"
+                    className={`md:w-[100%] w-[80%] flex flex-row`}
                 >
                     <div className="md:w-[50%] w-[100%] pb-16 pt-16 flex flex-col items-center md:pl-16">
                         <ExperienceCard
@@ -262,7 +262,7 @@ const WorkSection: React.FC = () => {
 
                 <li
                     id="counselhero-experience-fe"
-                    className=" w-[100%] flex flex-row"
+                    className={`md:w-[100%] w-[80%] flex flex-row`}
                 >
                     <div className="md:w-[50%] w-[100%] pb-16 pt-16 flex flex-col items-center md:pl-16">
                         <ExperienceCard
@@ -313,7 +313,7 @@ const WorkSection: React.FC = () => {
 
                 <li
                     id="counselhero-experience-python"
-                    className=" w-[100%] flex flex-row "
+                    className={`md:w-[100%] w-[80%] flex flex-row`}
                 >
                     <div className="md:w-[50%] w-[100%] pb-16 pt-16 flex flex-col items-center md:pl-16">
                         <ExperienceCard
