@@ -84,7 +84,7 @@ export default function Home() {
                         Email
                     </a>
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/ademirkan"
                         className="flex flex-row items-center gap-x-1 btn btn-primary btn-sm normal-case"
                     >
                         <FontAwesomeIcon
