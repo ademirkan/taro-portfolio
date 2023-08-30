@@ -17,45 +17,45 @@ export default function StaggerText(props: IStaggerTextProps) {
         },
     };
 
+    const children = props.children.split(" ").map((word, index) => {
+        return (
+            <motion.span
+                key={index}
+                className={props.childrenClassName || ""}
+                variants={{
+                    hidden: { y: props.staggerHeight, opacity: 0 },
+                    show: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                            y: {
+                                delay:
+                                    props.staggerDelay * (index + 2) +
+                                    props.startDelay,
+                                duration: props.staggerDelay,
+                                type: "easeOut",
+                            },
+                            opacity: {
+                                delay:
+                                    props.staggerDelay * index +
+                                    props.startDelay,
+                                duration: 0,
+                            },
+                        },
+                    },
+                }}
+            >
+                {word}
+            </motion.span>
+        );
+    });
+
     return (
         <motion.div
             className={props.className || ""}
             variants={container}
             initial="hidden"
             animate="show"
-        >
-            {props.children.split(" ").map((word, index) => {
-                return (
-                    <motion.span
-                        key={index}
-                        className={props.childrenClassName || ""}
-                        variants={{
-                            hidden: { y: props.staggerHeight, opacity: 0 },
-                            show: {
-                                y: 0,
-                                opacity: 1,
-                                transition: {
-                                    y: {
-                                        delay:
-                                            props.staggerDelay * (index + 2) +
-                                            props.startDelay,
-                                        duration: props.staggerDelay,
-                                        type: "easeOut",
-                                    },
-                                    opacity: {
-                                        delay:
-                                            props.staggerDelay * index +
-                                            props.startDelay,
-                                        duration: 0,
-                                    },
-                                },
-                            },
-                        }}
-                    >
-                        {word}
-                    </motion.span>
-                );
-            })}
-        </motion.div>
+        ></motion.div>
     );
 }

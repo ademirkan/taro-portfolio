@@ -15,6 +15,8 @@ export default function RenderOnceInView(props: {
         margin: props.margins || "0px 0px -50px 0px",
     });
 
+    console.log(isInView);
+
     return (
         <div
             ref={ref}

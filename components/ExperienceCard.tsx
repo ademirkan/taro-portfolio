@@ -9,7 +9,7 @@ const subtitleFont = Lexend({ subsets: ["latin"], weight: "400" });
 
 const ExperienceCard = (props: any) => {
     return (
-        <>
+        <div className=" max-w-md">
             <div className="my-2">
                 {props.timeframe && (
                     <div className="text-secondary text-xs opacity-75 relative leading-none">
@@ -25,13 +25,6 @@ const ExperienceCard = (props: any) => {
                 )}
             </div>
 
-            {/* <ul
-                className={`list-disc pl-4 text-sm my-2 ${bulletFont.className} text-secondary`}
-            >
-                {props.bullets.map((bullet: string, index: number) => {
-                    return <li key={index}>{bullet}</li>;
-                })}
-            </ul> */}
             {props.children}
 
             <div className="flex flex-row gap-[6px] text-xs select-none flex-wrap my-2 py-2">
@@ -72,7 +65,7 @@ const ExperienceCard = (props: any) => {
                     {props.source ? "Code" : "Private"}
                 </a>
             </div>
-        </>
+        </div>
     );
 };
 
