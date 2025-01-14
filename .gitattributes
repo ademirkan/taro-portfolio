@@ -1,2 +1,4 @@
 *.ts linguist-generated
 *.tsx linguist-generated
+*.scss linguist-generated
+
